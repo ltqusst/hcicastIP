@@ -78,6 +78,9 @@ int main()
         system("hciconfig hci0 noleadv");
         system("hciconfig hci0 leadv 3");
         system("hciconfig hci0 noscan");
+
+        //HCI command "set Adv data" requires exactly 31 bytes Adv packet
+        //    here we compose one.
         sprintf(strline, "hcitool -i hci0 cmd 0x08 0x0008 1E 02 01 06 1A 09");
 
         int len = strlen(strIP);
