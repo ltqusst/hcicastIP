@@ -6,6 +6,17 @@
 
 using namespace std;
 
+/*
+   this program automaticall check inet IP address of host PC
+   and setup hci0 BLE dongle to broadcast it by "Complete Local Name"
+   through Advertise packet.
+
+
+
+   you need put following command into /etc/rc.local
+   /home/xxx/hcicastIP/bin/Debug/hcicastIP &
+*/
+
 int main()
 {
     FILE *fp;
